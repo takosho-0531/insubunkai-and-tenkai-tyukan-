@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【中3数学】因数分解・展開 14問8分ノート特訓（ひっかけ対応版）</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Fira+Mono&display=swap');
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+    .math-font {
+      font-family: 'Fira Mono', monospace, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-amber-50/40 min-h-screen text-slate-800">
+
+  <header class="bg-white border-b border-amber-100 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="bg-amber-500 p-2 rounded-xl text-white shadow-md">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+        </div>
+        <div>
+          <h1 class="text-lg font-black tracking-wider text-slate-900 font-mono">因数分解・展開 ノート特訓</h1>
+          <p class="text-xs text-amber-700 font-bold">中学3年・14問 8分完全ロック【分数＆ひっかけ応用】</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-3">
+        <div id="timer-box" class="bg-slate-900 px-4 py-2 rounded-xl flex items-center gap-2 border border-slate-800 transition-all duration-300">
+          <span id="timer-icon-wrapper" class="text-emerald-400 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-pulse"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          <span id="timer-display" class="font-mono text-xl font-black text-emerald-400">08:00</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-6">
+    
+    <div id="intro-card" class="bg-white border border-amber-100 rounded-3xl p-6 md:p-8 shadow-sm max-w-2xl mx-auto my-8">
+      <div class="text-center mb-6">
+        <span class="bg-rose-100 text-rose-800 text-xs font-bold px-3 py-1.5 rounded-full border border-rose-200 flex items-center justify-center gap-1 w-max mx-auto font-mono">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          8分間完全ロックモード
+        </span>
+        <h2 class="text-2xl font-black text-slate-900 mt-3 mb-2">手元のノートで解く特訓モード</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          中学3年の教科書章末・高校入試レベルの応用問題14問にノートとペンで挑みましょう！<br>
+          <span class="text-indigo-600 font-bold">「隠れた1」を括り忘れないように引き出す、実戦的な「ひっかけ問題」</span>が追加されています。<br>
+          <strong class="text-rose-600 font-bold">※スタートすると問題が表示されます。8分間が経過するまで答えは一切表示されません。</strong>
+        </p>
+      </div>
+
+      <div class="bg-amber-50/30 border border-amber-100/80 rounded-2xl p-5 mb-6 text-center">
+        <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">今回のテスト設定</h3>
+        <div class="flex justify-center gap-6">
+          <div class="bg-white border border-amber-200/60 py-3 px-6 rounded-2xl shadow-sm">
+            <p class="text-xs text-slate-400 font-bold">問題数</p>
+            <p class="text-2xl font-black text-slate-800">14 問</p>
+          </div>
+          <div class="bg-white border border-amber-200/60 py-3 px-6 rounded-2xl shadow-sm">
+            <p class="text-xs text-slate-400 font-bold">制限時間</p>
+            <p class="text-2xl font-black text-rose-600">8 分間完全固定</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 mb-8 space-y-3">
+        <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-500"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          実戦的なひっかけ要素
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-xs text-slate-600">
+          <div class="flex items-center gap-1">✓ <strong class="text-indigo-900">隠れた1のひっかけ</strong>：(1+y) や (a+1) 形式の出現</div>
+          <div class="flex items-center gap-1">✓ <strong class="text-indigo-900">分数の約分</strong>：分数公式の約分を自動判定</div>
+          <div class="flex items-center gap-1">✓ 展開公式4つの応用問題が各1〜2問ずつ</div>
+          <div class="flex items-center gap-1">✓ 因数分解の応用問題（置き換え・4項平方の差）</div>
+        </div>
+      </div>
+
+      <button id="btn-start" class="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 active:scale-[0.98] text-white font-bold py-4 px-6 rounded-2xl shadow-lg shadow-amber-500/20 transition duration-150 flex items-center justify-center gap-3 text-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        スタート（問題を表示して8分タイマー開始）
+      </button>
+    </div>
+
+    <div id="test-area" class="hidden opacity-0 transition-opacity duration-300">
+      
+      <div class="bg-white rounded-2xl p-4 mb-6 border border-rose-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-rose-50/10">
+        <div class="flex items-center gap-2 text-sm text-slate-600">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-rose-500 flex-shrink-0 animate-pulse mr-2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span class="font-bold text-rose-800">8分間が経過するまで答え合わせはロックされています。ノートに解き、見直しを行いましょう！</span>
+        </div>
+        <div class="bg-rose-100 border border-rose-200 text-rose-800 font-bold py-2.5 px-4 rounded-xl text-xs flex items-center gap-1.5 shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-spin mr-1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          00:00になると自動でオープンします
+        </div>
+      </div>
+
+      <div class="bg-white border border-amber-100 rounded-3xl p-6 md:p-8 shadow-sm space-y-8">
+        <div>
+          <h3 class="text-base font-black text-slate-900 border-l-4 border-amber-500 pl-3 mb-6 flex items-center gap-2">
+            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded">問 1</span>
+            次の式を展開しなさい。
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6" id="questions-expand-container"></div>
+        </div>
+
+        <hr class="border-dashed border-slate-200">
+
+        <div>
+          <h3 class="text-base font-black text-slate-900 border-l-4 border-amber-500 pl-3 mb-6 flex items-center gap-2">
+            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded">問 2</span>
+            次の式を因数分解しなさい。
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6" id="questions-factorize-container"></div>
+        </div>
+      </div>
+
+      <div class="mt-8 flex justify-center pb-12">
+        <div class="w-full sm:w-80 bg-slate-200 text-slate-400 font-black py-4 px-8 rounded-2xl shadow-inner border border-slate-300 flex items-center justify-center gap-2 text-lg cursor-not-allowed select-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 mr-2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          答え合わせ（8分間ロック中）
+        </div>
+      </div>
+    </div>
+
+    <div id="result-area" class="hidden bg-white rounded-3xl shadow-md border border-amber-100 p-6 md:p-8 mb-8">
+      
+      <div class="text-center mb-8 bg-amber-50/50 p-6 rounded-3xl border border-amber-100/50 relative overflow-hidden">
+        <h2 class="text-xl font-black text-slate-900 mb-2">解答・解説パネル</h2>
+        <p class="text-sm text-slate-600 max-w-lg mx-auto">
+          手元のノートと正しい答えを見比べて答え合わせをしましょう！<br>
+          「合ってた」「間違えた」を押すと一番下に最終スコアが計算されます。
+        </p>
+        
+        <div class="mt-4 inline-flex items-baseline gap-2 bg-white px-6 py-2.5 rounded-2xl border border-amber-200 shadow-sm">
+          <span class="text-xs font-bold text-slate-500">現在の得点:</span>
+          <span id="live-score" class="text-3xl font-black text-amber-600">0</span>
+          <span class="text-sm text-slate-400" id="max-score-display">/ 140 点</span>
+        </div>
+      </div>
+
+      <div class="space-y-6 mb-8" id="grading-list"></div>
+
+      <div id="final-summary-box" class="p-6 md:p-8 bg-slate-900 text-white rounded-3xl text-center shadow-xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent pointer-events-none"></div>
+        <h3 class="text-amber-400 font-black tracking-widest text-sm">SUMMARY</h3>
+        
+        <div class="inline-flex items-baseline gap-2 mt-2 mb-4">
+          <span id="final-score" class="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">0</span>
+          <span class="text-xl text-slate-400" id="final-max-score">/ 140 点</span>
+        </div>
+        
+        <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-300 mt-4 mb-6 bg-slate-950/40 p-4 rounded-xl max-w-md mx-auto">
+          <div class="flex items-center gap-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400 mr-1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>解いた時間: <strong class="text-white">8分00秒（時間完走）</strong></span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400 mr-1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>正答数: <strong id="spent-ratio-text" class="text-white">0 / 14問</strong></span>
+          </div>
+        </div>
+
+        <button id="btn-restart-final" class="bg-amber-500 hover:bg-amber-600 active:scale-[0.98] text-white font-bold py-3.5 px-10 rounded-2xl shadow-lg shadow-amber-500/10 transition inline-flex items-center gap-2 text-sm mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+          新しい問題で再挑戦する！
+        </button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="bg-white border-t border-amber-100 py-8 mt-12 text-center text-xs text-slate-500">
+    <p>© 2026 因数分解・展開 中3応用ノート特訓 High Level Edition</p>
+  </footer>
+
+  <script>
+    // --- グローバル状態管理変数 ---
+    let currentQuestions = [];
+    let gradingResults = [];
+    let timerInterval = null;
+    let timeRemaining = 480;
+    let isTestActive = false;
+    let startTime = null;
+
+    const targetQuestionCount = 14;
+    const targetTimeLimit = 480; // 8分固定
+
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    // 最大公約数を求める (分数約分用)
+    function getGCD(x, y) {
+      x = Math.abs(x);
+      y = Math.abs(y);
+      while(y) {
+        let t = y;
+        y = x % y;
+        x = t;
+      }
+      return x;
+    }
+
+    // 分数を約分して [frac:分子:分母] の文字列を生成する
+    function makeReducedFraction(num, den) {
+      if (num === 0) return "0";
+      const gcd = getGCD(num, den);
+      const reducedNum = num / gcd;
+      const reducedDen = den / gcd;
+      if (reducedDen === 1) {
+        return `${reducedNum}`;
+      }
+      return `[frac:${reducedNum}:${reducedDen}]`;
+    }
+
+    // 分数記法を美しく縦書きHTMLにする
+    function renderMathHTML(str) {
+      if (!str) return '';
+      let html = str;
+      html = html.replace(/\[frac:([^:]+):([^\]]+)\]/g, (match, num, den) => {
+        return `<span class="inline-flex flex-col items-center justify-center align-middle text-[0.85em] leading-none mx-1 font-bold"><span class="border-b border-slate-700 pb-0.5 mb-0.5">${num}</span><span>${den}</span></span>`;
+      });
+      html = html.replace(/\^2/g, '<span class="text-[0.75em] font-bold" style="vertical-align: super; line-height: 0;">²</span>');
+      html = html.replace(/\^3/g, '<span class="text-[0.75em] font-bold" style="vertical-align: super; line-height: 0;">³</span>');
+      html = html.replace(/\^4/g, '<span class="text-[0.75em] font-bold" style="vertical-align: super; line-height: 0;">⁴</span>');
+      return html;
+    }
+
+    function generateQuestions() {
+      const halfCount = Math.floor(targetQuestionCount / 2); // 7問ずつ
+
+      // 展開7問を生成
+      const expansions = [
+        // 1. 公式1（乗法公式）：2文字
+        (() => {
+          const a = getRandomInt(2, 6);
+          const b = getRandomInt(2, 6);
+          const diff = a - b;
+          const prod = -a * b;
+          
+          let diffStr = "";
+          if (diff !== 0) {
+            if (diff === 1) {
+              diffStr = "+ xy";
+            } else if (diff === -1) {
+              diffStr = "- xy";
+            } else {
+              diffStr = diff > 0 ? `+ ${diff}xy` : `- ${Math.abs(diff)}xy`;
+            }
+          }
+
+          const step1 = `x^2 - ${b}xy + ${a}xy - ${a * b}y^2`;
+          const step2 = `x^2 ${diffStr} - ${Math.abs(prod)}y^2`;
+          return {
+            type: '【公式1の応用】2変数の乗法公式',
+            formula: '(x + ay)(x - by) = x² + (a-b)xy - aby²',
+            problem: `(x + ${a}y)(x - ${b}y)`,
+            correct: step2.replace(/\s+/g, ' ').trim(),
+            desc: `$(x+a)(x+b) = x^2 + (a+b)x + ab$ の公式をもとに計算します。同類項をまとめる際、係数が $1$ や $-1$ の場合は $1$ を省略して $xy$ と書くことに注意しましょう。<br>
+            <div class="mt-2 bg-white p-3 rounded-lg border border-amber-100 font-mono text-sm text-slate-700 leading-relaxed">
+              <strong>■ 途中式：</strong><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;(x + ${a}y)(x - ${b}y)<br>
+              &nbsp;&nbsp;= ${step1}<br>
+              &nbsp;&nbsp;= <strong>${step2}</strong>
+            </div>`
+          };
+        })(),
+
+        // 2. 公式2（平方・プラス）：xの係数あり
+        (() => {
+          const a = getRandomInt(2, 4);
+          const b = getRandomInt(2, 5);
+          const middle = 2 * a * b;
+          const step1 = `(${a}x)^2 + 2 × ${a}x × ${b} + ${b}^2`;
+          const step2 = `${a*a}x^2 + ${middle}x + ${b*b}`;
+          return {
+            type: '【公式2の応用】平方の展開 (xの係数あり)',
+            formula: '(ax + b)² = a²x² + 2abx + b²',
+            problem: `(${a}x + ${b})^2`,
+            correct: step2,
+            desc: `平方の公式 $(A + B)^2 = A^2 + 2AB + B^2$ を利用します。$A = ${a}x$、 $B = ${b}$ です。<br>
+            <div class="mt-2 bg-white p-3 rounded-lg border border-amber-100 font-mono text-sm text-slate-700 leading-relaxed">
+              <strong>■ 途中式：</strong><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;(${a}x + ${b})^2<br>
+              &nbsp;&nbsp;= ${step1}<br>
+              &nbsp;&nbsp;= <strong>${step2}</strong>
+            </div>`
+          };
+        })(),
+
+        // 3. 公式3（平方・マイナス）：2文字と係数
+        (() => {
+          const a = getRandomInt(2, 4);
+          const b = getRandomInt(2, 4);
+          const middle = 2 * a * b;
+          const step1 = `(${a}x)^2 - 2 × ${a}x × ${b}y + (${b}y)^2`;
+          const step2 = `${a*a}x^2 - ${middle}xy + ${b*b}y^2`;
+          return {
+            type: '【公式3の応用】平方の展開 (2文字＆係数あり)',
+            formula: '(ax - by)² = a²x² - 2abxy + b²y²',
+            problem: `(${a}x - ${b}y)^2`,
+            correct: step2,
+            desc: `$(A - B)^2 = A^2 - 2AB + B^2$ の公式を使います。最後の2乗はプラスになります。<br>
+            <div class="mt-2 bg-white p-3 rounded-lg border border-amber-100 font-mono text-sm text-slate-700 leading-relaxed">
+              <strong>■ 途中式：</strong><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;(${a}x - ${b}y)^2<br>
+              &nbsp;&nbsp;= ${step1}<br>
+              &nbsp;&nbsp;= <strong>${step2}</strong>
+            </div>`
+          };
+        })(),
+
+        // 4. 公式4（和と差の積）
+        (() => {
+          const a = getRandomInt(2, 5);
+          const b = getRandomInt(2, 5);
+          const step1 = `(${a}x)^2 - (${b}y)^2`;
+          const step2 = `${a*a}x^2 - ${b*b}y^2`;
+          return {
+            type: '【公式4】和と差の積の展開',
+            formula: '(ax + by)(ax - by) = a²x² - b²y²',
+            problem: `(${a}x + ${b}y)(${a}x - ${b}y)`,
+            correct: step2,
+            desc: `$(A+B)(A-B) = A^2 - B^2$ の公式です。<br>
+            <div class="mt-2 bg-white p-3 rounded-lg border border-amber-100 font-mono text-sm text-slate-700 leading-relaxed">
+              <strong>■ 途中式：</strong><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;(${a}x + ${b}y)(${a}x - ${b}y)<br>
+              &nbsp;&nbsp;= ${step1}<br>
+              &nbsp;&nbsp;= <strong>${step2}</strong>
+            </div>`
+          };
+        })(),
+
+        // 5. 分数の平方公式
+        (() => {
+          const a = [2, 3, 4, 5, 6][getRandomInt(0, 4)];
+          const sign = Math.random() > 0.5 ? '+' : '-';
+          const reducedMiddleFrac = makeReducedFraction(2, a);
+          let middleTerm = "";
+          
+          if (reducedMiddleFrac === "1") {
+            middleTerm = `${sign} x`;
+          } else {
+            middleTerm = `${sign} ${reducedMiddleFrac}x`;
+          }
+          
+          const sqA = a * a;
+          return {
+            type: '【分数公式】平方公式の展開',
+            problem: `(x ${sign} [frac:1:${a}])^2`,
+            correct: `x^2 ${middleTerm} + [frac:1:${sqA}]`,
+            desc: `真ん中の項を求める「2倍」の計算プロセスで、約分を正しく行うのがポイントです。係数が $1$ になる場合は省略して記述します。<br>
+            <div class="mt-2 bg-white p-3 rounded-lg border border-amber-100 font-mono text-sm text-slate-700 leading-relaxed">
+              <strong>■ 途中式：</strong><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;(x ${sign} [frac:1:${a}])^2<br>
+              &nbsp;&nbsp;= x^2 ${sign} 2 × x × [frac:1:${a}] + ([frac:1:${a}])^2<br>
+              &nbsp;&nbsp;= <strong>x^2 ${middleTerm} + [frac:1:${sqA}]</strong>
+            </div>`
+          };
+        })(),
+
+        // 6. 分数の和と差の積
+        (() => {
+          const a = [2, 3, 4, 5, 6, 8, 10][getRandomInt(0, 6)];
+          const sqA = a * a;
+          return {
+            type: '【分数公式】和と差の積の展開',
+            problem: `(x + [frac:1:${a}])(x - [frac:1:${a}])`,
+            correct: `x^2 - [frac:1:${sqA}]`,
+            desc: `公式 $(A+B)(A-B) = A^2 - B^2$ にそのまま分数を代入します。<br>
+            <div class="mt-2 bg-white p-3 rounded-lg border border-amber-100 font-mono text-sm text-slate-700 leading-relaxed">
+              <strong>■ 途中式：</strong><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;(x + [frac:1:${a}])(x - [frac:1:${a}])<br>
+              &nbsp;&nbsp;= x^2 - ([frac:1:${a}])^2<br>
+              &nbsp;&nbsp;= <strong>x^2 - [frac:1:${sqA}]</strong>
+            </div>`
+          };
+        })(),
+
+        // 7. 応用（置き換えによる展開）
+        (() => {
+          const a = getRandomInt(2, 6);
+          return {
+            type: '【置き換え展開】3項の乗法公式',
+            formula: 'x + y = A とおく',
+            problem: `(x + y + ${a})(x + y - ${a})`,
+            correct: `x^2 + 2xy + y^2 - ${a*a}`,
+            desc: `$x+y = A$ と置いて展開公式を適用します。<br>
+            <div class="mt-2 bg-white p-3 rounded-lg border border-amber-100 font-mono text-sm text-slate-700 leading-relaxed">
+              <strong>■ 途中式：</strong><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;x + y = A とおく<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;(A + ${a})(A - ${a})<br>
+              &nbsp;&nbsp;= A^2 - ${a*a}<br>
+              &nbsp;&nbsp;= (x + y)^2 - ${a*a}<br>
+              &nbsp;&nbsp;= <strong>x^2 + 2xy + y^2 - ${a*a}</strong>
+            </div>`
+          };
+        })()
+      ];
+
+      // 因数分解7問を生成
+      const factorizations = [
+        // 1. 共通因数（2文字）
+        (() => {
+          const a = getRandomInt(2, 5);
+          return {
+            type: '【因数分解1】共通因数のくくり出し',
+            problem: `${a}x^2y - ${a*2}xy^2`,
+            correct: `${a}xy(x - 2y)`,
+            desc: `共通する因数を外に出します。係数 $${a}$ と文字 $xy$ が共通因数です。<br>
+            <div class="mt-2 bg-white p-3 rounded-lg border border-amber-100 font-mono text-sm text-slate-700 leading-relaxed">
+              <strong>■ 解き方：</strong><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;${a}x^2y - ${a*2}xy^2<br>
+              &nbsp;&nbsp;= ${a}xy × x - ${a}xy × 2y<br>
+              &nbsp;&nbsp;= <strong>${a}xy(x - 2y)</strong>
+            </div>`
+          };
+        })(),
+
+        // 2. 共通因数 ＋ 公式1
+        (() => {
+          const a = getRandomInt(2, 3);
+          const b = getRandomInt(2, 3);
+          const c = getRandomInt(4, 5);
+          const sum = b + c;
+          const prod = b * c;
+          return {
+            type: '【因数分解2】共通因数 ＋ 公式1の併用',
+            problem: `${a}x^2 + ${a*sum}x + ${a*prod}`,
+            correct: `${a}(x + ${b})(x + ${c})`,
+            desc: `まず全体を共通因数でくくったあと、カッコ内に公式1を適用します。<br>
+            <div class="mt-2 bg-white p-3 rounded-lg border border-amber-100 font-mono text-sm text-slate-700 leading-relaxed">
+              <strong>■ 途中式：</strong><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;${a}x^2 + ${a*sum}x + ${a*prod}<br>
+              &nbsp;&nbsp;= ${a}(x^2 + ${sum}x + ${prod})<br>
+              &nbsp;&nbsp;= <strong>${a}(x + ${b})(x + ${c})</strong>
+            </div>`
+          };
+        })(),
+
+        // 3. 共通因数 ＋ 平方公式
+        (() => {
+          const a = getRandomInt(2, 4);
+          const b = getRandomInt(2, 4);
+          const sum = 2 * b;
+          const prod = b * b;
+          return {
+            type: '【因数分解3】共通因数 ＋ 平方公式の併用',
+            problem: `${a}x^2 - ${a*sum}x + ${a*prod}`,
+            correct: `${a}(x - ${b})^2`,
+            desc: `全体を $${a}$ でくくると、カッコの中が「平方の公式」の逆になります。<br>
+            <div class="mt-2 bg-white p-3 rounded-lg border border-amber-100 font-mono text-sm text-slate-700 leading-relaxed">
+              <strong>■ 途中式：</strong><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;${a}x^2 - ${a*sum}x + ${a*prod}<br>
+              &nbsp;&nbsp;= ${a}(x^2 - ${sum}x + ${prod})<br>
+              &nbsp;&nbsp;= <strong>${a}(x - ${b})^2</strong>
+            </div>`
+          };
+        })(),
+
+        // 4. 分数因数分解（二乗の差）
+        (() => {
+          const a = [2, 3, 4, 5, 6, 8, 10][getRandomInt(0, 6)];
+          const sqA = a * a;
+          return {
+            type: '【分数因数分解】平方の差（公式4の逆）',
+            problem: `x^2 - [frac:1:${sqA}]`,
+            correct: `(x + [frac:1:${a}])(x - [frac:1:${a}])`,
+            desc: `$A^2 - B^2 = (A+B)(A-B)$ を使います。分数が何の2乗かを考えましょう。<br>
+            <div class="mt-2 bg-white p-3 rounded-lg border border-amber-100 font-mono text-sm text-slate-700 leading-relaxed">
+              <strong>■ 途中式：</strong><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;x^2 - [frac:1:${sqA}]<br>
+              &nbsp;&nbsp;= x^2 - ([frac:1:${a}])^2<br>
+              &nbsp;&nbsp;= <strong>(x + [frac:1:${a}])(x - [frac:1:${a}])</strong>
+            </div>`
+          };
+        })(),
+
+        // 5. 置き換え因数分解（隠れた1のひっかけ）
+        (() => {
+          const problemStr = `(x + y)^2 - (x + y) - 6`;
+          const correctStr = `(x + y - 3)(x + y + 2)`;
+          return {
+            type: '【置き換え因数分解】（隠れた1のひっかけ問題）',
+            formula: 'A = x + y とおく',
+            problem: problemStr,
+            correct: correctStr,
+            desc: `一見難しく見えますが、共通のまとまり $x+y$ を大きな文字 $A$ に置き換えます。真ん中の $-(x+y)$ は係数 $1$ が省略されていることに注意して因数分解しましょう！<br>
+            <div class="mt-2 bg-white p-3 rounded-lg border border-amber-100 font-mono text-sm text-slate-700 leading-relaxed">
+              <strong>■ 途中式：</strong><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;x + y = A とおく<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;A^2 - A - 6 <span class="text-rose-500 text-xs">（←係数 1 が隠れています！）</span><br>
+              &nbsp;&nbsp;= (A - 3)(A + 2)<br>
+              &nbsp;&nbsp;= <strong>(x + y - 3)(x + y + 2)</strong>
+            </div>`
+          };
+        })(),
+
+        // 6. カッコ内の符号を合わせてくくる（隠れた1のひっかけ）
+        (() => {
+          const vars = ['a', 'm', 'p'][getRandomInt(0, 2)];
+          return {
+            type: '【発展因数分解】（隠れた1の符号反転ひっかけ）',
+            problem: `${vars}(x - 3) - (3 - x)`,
+            correct: `(${vars} + 1)(x - 3)`,
+            desc: `後半の $-(3-x)$ を変形して $+(x-3)$ にしたとき、実は手前に係数の「$1$」が隠れています。共通因数でくくったときにこの「$1$」を括弧内に残す必要があります。<br>
+            <div class="mt-2 bg-white p-3 rounded-lg border border-amber-100 font-mono text-sm text-slate-700 leading-relaxed">
+              <strong>■ 途中式：</strong><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;${vars}(x - 3) - (3 - x)<br>
+              &nbsp;&nbsp;= ${vars}(x - 3) + 1(x - 3) <span class="text-rose-500 text-xs">（←符号を揃えると 1 が出現！）</span><br>
+              &nbsp;&nbsp;= <strong>(${vars} + 1)(x - 3)</strong>
+            </div>`
+          };
+        })(),
+
+        // 7. 平方の差をつくる4項の因数分解
+        (() => {
+          const aVal = getRandomInt(2, 4);
+          const doubleAVal = aVal * 2;
+          const sqAVal = aVal * aVal;
+          return {
+            type: '【最難関因数分解】4つの項から平方の差を作る',
+            problem: `x^2 + ${doubleAVal}x + ${sqAVal} - y^2`,
+            correct: `(x + y + ${aVal})(x - y + ${aVal})`,
+            desc: `前の3項をまとめて平方（2乗）をつくります。<br>
+            <div class="mt-2 bg-white p-3 rounded-lg border border-amber-100 font-mono text-sm text-slate-700 leading-relaxed">
+              <strong>■ 途中式：</strong><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;x^2 + ${doubleAVal}x + ${sqAVal} - y^2<br>
+              &nbsp;&nbsp;= (x^2 + ${doubleAVal}x + ${sqAVal}) - y^2<br>
+              &nbsp;&nbsp;= (x + ${aVal})^2 - y^2<br>
+              &nbsp;&nbsp;= { (x + ${aVal}) + y }{ (x + ${aVal}) - y }<br>
+              &nbsp;&nbsp;= <strong>(x + y + ${aVal})(x - y + ${aVal})</strong>
+            </div>`
+          };
+        })()
+      ];
+
+      const combined = [...expansions, ...factorizations];
+      let qNum = 1;
+      combined.forEach(q => { 
+        q.num = qNum++; 
+      });
+      return combined;
+    }
+
+    // タイマー管理
+    function startTimer() {
+      clearInterval(timerInterval);
+      timeRemaining = targetTimeLimit;
+      isTestActive = true;
+      startTime = Date.now();
+      
+      const timerDisplay = document.getElementById('timer-display');
+      const timerBox = document.getElementById('timer-box');
+      const timerIconWrapper = document.getElementById('timer-icon-wrapper');
+
+      timerInterval = setInterval(() => {
+        timeRemaining--;
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = timeRemaining % 60;
+
+        if (timerDisplay) {
+          timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+
+        if (timeRemaining <= 60) {
+          if (timerBox) timerBox.classList.add('border-red-500', 'bg-red-950');
+          if (timerDisplay) {
+            timerDisplay.classList.remove('text-emerald-400');
+            timerDisplay.classList.add('text-red-400', 'animate-pulse');
+          }
+          if (timerIconWrapper) timerIconWrapper.className = "text-red-400 flex items-center";
+        } else {
+          if (timerBox) timerBox.className = "bg-slate-900 px-4 py-2 rounded-xl flex items-center gap-2 border border-slate-800 transition-all duration-300";
+          if (timerDisplay) {
+            timerDisplay.className = "font-mono text-xl font-black text-emerald-400";
+          }
+          if (timerIconWrapper) timerIconWrapper.className = "text-emerald-400 flex items-center";
+        }
+
+        if (timeRemaining <= 0) {
+          clearInterval(timerInterval);
+          isTestActive = false;
+          finishTest();
+        }
+      }, 1000);
+    }
+
+    function initTest() {
+      clearInterval(timerInterval);
+      timeRemaining = targetTimeLimit;
+      isTestActive = false;
+      gradingResults = Array(targetQuestionCount).fill(null);
+
+      const timerDisplay = document.getElementById('timer-display');
+      if (timerDisplay) timerDisplay.textContent = "08:00";
+
+      const liveScore = document.getElementById('live-score');
+      if (liveScore) liveScore.textContent = '0';
+
+      const introCard = document.getElementById('intro-card');
+      if (introCard) introCard.classList.remove('hidden');
+
+      const testArea = document.getElementById('test-area');
+      if (testArea) testArea.classList.add('hidden');
+
+      const resultArea = document.getElementById('result-area');
+      if (resultArea) resultArea.classList.add('hidden');
+
+      currentQuestions = generateQuestions();
+
+      const expContainer = document.getElementById('questions-expand-container');
+      const factContainer = document.getElementById('questions-factorize-container');
+
+      if (expContainer && factContainer) {
+        expContainer.innerHTML = '';
+        factContainer.innerHTML = '';
+
+        const halfCount = Math.floor(targetQuestionCount / 2);
+
+        currentQuestions.forEach((q) => {
+          const container = q.num <= halfCount ? expContainer : factContainer;
+          const qBox = document.createElement('div');
+          qBox.className = "p-4 bg-amber-50/20 border border-amber-100/40 rounded-2xl flex items-start gap-4 hover:bg-amber-50/40 transition-colors";
+          qBox.innerHTML = `
+            <span class="font-black text-amber-600 text-base min-w-[28px] mt-0.5">(${q.num})</span>
+            <div class="flex-1">
+              <span class="math-font text-xl font-bold tracking-wide text-slate-800 flex items-center flex-wrap">${renderMathHTML(q.problem)}</span>
+              <div class="mt-4 h-12 border-b border-dashed border-slate-200"></div>
+            </div>
+          `;
+          container.appendChild(qBox);
+        });
+      }
+    }
+
+    function startTest() {
+      const introCard = document.getElementById('intro-card');
+      const testArea = document.getElementById('test-area');
+      const resultArea = document.getElementById('result-area');
+
+      if (introCard) introCard.classList.add('hidden');
+      if (resultArea) resultArea.classList.add('hidden');
+      if (testArea) {
+        testArea.classList.remove('hidden');
+        setTimeout(() => { testArea.classList.add('opacity-100'); }, 50);
+      }
+      startTimer();
+    }
+
+    function finishTest() {
+      clearInterval(timerInterval);
+      isTestActive = false;
+
+      const testArea = document.getElementById('test-area');
+      const resultArea = document.getElementById('result-area');
+      const spentRatioText = document.getElementById('spent-ratio-text');
+      const gradingList = document.getElementById('grading-list');
+
+      if (testArea) testArea.classList.add('hidden');
+      if (resultArea) resultArea.classList.remove('hidden');
+
+      if (spentRatioText) spentRatioText.textContent = `0 / ${targetQuestionCount}問`;
+
+      if (gradingList) {
+        gradingList.innerHTML = '';
+        currentQuestions.forEach((q, idx) => {
+          const panel = document.createElement('div');
+          panel.id = `grade-card-${idx}`;
+          panel.className = "p-5 rounded-2xl border border-slate-200 bg-white transition-all duration-300";
+          
+          panel.innerHTML = `
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4 border-b pb-3 border-slate-100">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-sm font-black text-slate-700">問 ${q.num}</span>
+                <span class="text-xs bg-slate-100 border border-slate-200 text-slate-600 font-bold px-2.5 py-1 rounded-md">${q.type}</span>
+              </div>
+              
+              <div class="flex gap-2">
+                <button onclick="gradeQuestion(${idx}, true)" id="btn-correct-${idx}" 
+                  class="bg-slate-50 hover:bg-emerald-50 text-slate-600 hover:text-emerald-700 border border-slate-200 hover:border-emerald-200 font-bold px-4 py-1.5 rounded-xl text-xs flex items-center gap-1 transition shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-500"><polyline points="20 6 9 17 4 12"/></svg>
+                  合ってた
+                </button>
+                <button onclick="gradeQuestion(${idx}, false)" id="btn-wrong-${idx}" 
+                  class="bg-slate-50 hover:bg-rose-50 text-slate-600 hover:text-rose-700 border border-slate-200 hover:border-rose-200 font-bold px-4 py-1.5 rounded-xl text-xs flex items-center gap-1 transition shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-rose-500"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  間違えた
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p class="text-slate-400 text-xs font-bold">問題</p>
+                <p class="font-extrabold text-xl text-slate-800 mt-1 font-mono tracking-wide bg-slate-50 py-2.5 px-4 rounded-xl border border-slate-100 flex items-center flex-wrap">${renderMathHTML(q.problem)}</p>
+              </div>
+              <div>
+                <p class="text-slate-400 text-xs font-bold">正しい答え</p>
+                <p class="font-extrabold text-xl text-rose-600 mt-1 font-mono tracking-wide bg-rose-50/30 py-2.5 px-4 rounded-xl border border-rose-100/50 flex items-center flex-wrap">${renderMathHTML(q.correct)}</p>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-dashed border-slate-100 bg-slate-50/50 p-3 rounded-xl">
+              <p class="text-slate-500 text-xs font-black mb-1.5 flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-500"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                解説と詳しい途中式
+              </p>
+              <div class="text-slate-600 text-xs leading-relaxed">${renderMathHTML(q.desc)}</div>
+            </div>
+          `;
+          gradingList.appendChild(panel);
+        });
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.gradeQuestion = function(index, isCorrect) {
+      gradingResults[index] = isCorrect;
+
+      const card = document.getElementById(`grade-card-${index}`);
+      const btnCorrect = document.getElementById(`btn-correct-${index}`);
+      const btnWrong = document.getElementById(`btn-wrong-${index}`);
+
+      if (isCorrect) {
+        if (card) card.className = "p-5 rounded-2xl border-2 border-emerald-500 bg-emerald-50/10 shadow-sm transition-all duration-300";
+        if (btnCorrect) btnCorrect.className = "bg-emerald-600 text-white font-bold px-4 py-1.5 rounded-xl text-xs flex items-center gap-1 transition shadow-md shadow-emerald-600/15";
+        if (btnWrong) btnWrong.className = "bg-slate-50 text-slate-400 border border-slate-200 font-bold px-4 py-1.5 rounded-xl text-xs flex items-center gap-1 opacity-50 transition";
+      } else {
+        if (card) card.className = "p-5 rounded-2xl border-2 border-rose-500 bg-rose-50/10 shadow-sm transition-all duration-300";
+        if (btnCorrect) btnCorrect.className = "bg-slate-50 text-slate-400 border border-slate-200 font-bold px-4 py-1.5 rounded-xl text-xs flex items-center gap-1 opacity-50 transition";
+        if (btnWrong) btnWrong.className = "bg-rose-600 text-white font-bold px-4 py-1.5 rounded-xl text-xs flex items-center gap-1 transition shadow-md shadow-rose-600/15";
+      }
+
+      const score = gradingResults.reduce((acc, curr) => curr === true ? acc + 10 : acc, 0);
+      
+      const liveScore = document.getElementById('live-score');
+      if (liveScore) liveScore.textContent = score;
+      
+      const correctCount = gradingResults.filter(res => res === true).length;
+      const spentRatioText = document.getElementById('spent-ratio-text');
+      if (spentRatioText) spentRatioText.textContent = `${correctCount} / ${targetQuestionCount}問`;
+
+      const finalScore = document.getElementById('final-score');
+      if (finalScore) finalScore.textContent = score;
+    };
+
+    window.addEventListener('load', () => {
+      initTest();
+      
+      const startBtn = document.getElementById('btn-start');
+      if (startBtn) {
+        startBtn.addEventListener('click', startTest);
+      }
+
+      const restartFinalBtn = document.getElementById('btn-restart-final');
+      if (restartFinalBtn) {
+        restartFinalBtn.addEventListener('click', () => {
+          initTest();
+          startTest();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
